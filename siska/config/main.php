@@ -47,4 +47,7 @@ return [
         */
     ],
     'params' => $params,
+    // sting bahasa dan timzone
+    'language'=> 'id-ID',
+    'timeZone'=>'Asia/Jakarta',
 ];
