@@ -2,7 +2,7 @@
 
 namespace siska\models;
 
-use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "fakultas".
@@ -57,5 +57,16 @@ class Fakultas extends \yii\db\ActiveRecord
     public function getProdis()
     {
         return $this->hasMany(Prodi::class, ['fakultas_id' => 'id']);
+    }
+
+    /**
+     * Returns an array suitable for use in a dropdown.
+     *
+     * @return array
+     */
+    public static function dropdown()
+    {
+        $models = self::find()->all();
+        return ArrayHelper::map($models, 'id', 'nama_fakultas');
     }
 }
