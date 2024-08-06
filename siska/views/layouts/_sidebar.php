@@ -52,8 +52,8 @@
                         'label'=> 'Data Master',
                         'icon'=> 'database',
                         'items' =>[
-                            ['lable'=> 'Agama', 'icon'=> 'mosque', 'url'=> ['/']],
-                            ['lable'=> 'Wilayah', 'icon'=> 'globe-asia', 'url'=> ['/']],
+                            ['label'=> 'Agama', 'icon'=> 'mosque', 'url'=> ['/agama']],
+                            ['label'=> 'Wilayah', 'icon'=> 'globe-asia', 'url'=> ['/wilayah']],
                         ]
                         ],
                      //    Menu AKADENIK
@@ -70,13 +70,13 @@
                         'items' => [
                             ['label' => 'Fakultas', 'icon' => 'university', 'url' => ['/fakultas']],
                             ['label' => 'Prodi', 'icon' => 'globe', 'url' => ['/prodi']],
-                            ['label' => 'Dosen', 'icon' => 'chalkboard-teacher', 'url' => ['/']],
-                            ['label' => 'Mahasiswa', 'icon' => 'user-graduate', 'url' => ['/']],
-                            ['label' => 'Staf', 'icon' => 'user-tie', 'url' => ['/']],
-                            ['label' => 'Mata Kuliah', 'icon' => 'book-open', 'url' => ['/']],
-                            ['label' => 'Status Dosen', 'icon' => 'user-check', 'url' => ['/']],
+                            ['label' => 'Dosen', 'icon' => 'chalkboard-teacher', 'url' => ['/dosen']],
+                            ['label' => 'Mahasiswa', 'icon' => 'user-graduate', 'url' => ['/mahasiswa']],
+                            ['label' => 'Staf', 'icon' => 'user-tie', 'url' => ['/staf']],
+                            ['label' => 'Mata Kuliah', 'icon' => 'book-open', 'url' => ['/mata-kuliah']],
+                            ['label' => 'Status Dosen', 'icon' => 'user-check', 'url' => ['/status-dosen']],
                             ['label' => 'Jabatan Struktural', 'icon' => 'sitemap', 'url' => ['/']],
-                            ['label' => 'Universitas', 'icon' => 'school', 'url' => ['/']],
+                            ['label' => 'Universitas', 'icon' => 'school', 'url' => ['/universitas']],
                         ]
                         ],
                     
