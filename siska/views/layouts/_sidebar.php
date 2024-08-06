@@ -75,7 +75,7 @@
                             ['label' => 'Staf', 'icon' => 'user-tie', 'url' => ['/staf']],
                             ['label' => 'Mata Kuliah', 'icon' => 'book-open', 'url' => ['/mata-kuliah']],
                             ['label' => 'Status Dosen', 'icon' => 'user-check', 'url' => ['/status-dosen']],
-                            ['label' => 'Jabatan Struktural', 'icon' => 'sitemap', 'url' => ['/']],
+                            ['label' => 'Jabatan Struktural', 'icon' => 'sitemap', 'url' => ['/jabatan-struktural']],
                             ['label' => 'Universitas', 'icon' => 'school', 'url' => ['/universitas']],
                         ]
                         ],
