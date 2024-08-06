@@ -48,8 +48,8 @@ class Prodi extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'kode' => 'Kode',
-            'nama_prodi' => 'Nama Prodi',
-            'fakultas_id' => 'Fakultas ID',
+            'nama_prodi' => 'Nama Program Prodi Studi',
+            'fakultas_id' => 'Fakultas ',
         ];
     }
 

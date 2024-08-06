@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var siska\models\Prodi $model */
 
-$this->title = 'Create Prodi';
-$this->params['breadcrumbs'][] = ['label' => 'Prodis', 'url' => ['index']];
+$this->title = 'Tambah Program Prodi';
+$this->params['breadcrumbs'][] = ['label' => 'Program Studi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="prodi-create">

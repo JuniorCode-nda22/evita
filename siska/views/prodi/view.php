@@ -1,13 +1,15 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+
+// krajee
+use kartik\detail\DetailView;
 
 /** @var yii\web\View $this */
 /** @var siska\models\Prodi $model */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Prodis', 'url' => ['index']];
+$this->title = $model->nama_prodi;
+$this->params['breadcrumbs'][] = ['label' => 'Program studi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -29,10 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'kode',
             'nama_prodi',
-            'fakultas_id',
+            ['attribute'=>'fakultas_id',
+            'value'=>$model->fakultas->nama_fakultas]
+           
         ],
     ]) ?>
 
