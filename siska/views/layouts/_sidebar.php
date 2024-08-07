@@ -77,6 +77,8 @@
                             ['label' => 'Status Dosen', 'icon' => 'user-check', 'url' => ['/status-dosen']],
                             ['label' => 'Jabatan Struktural', 'icon' => 'sitemap', 'url' => ['/jabatan-struktural']],
                             ['label' => 'Universitas', 'icon' => 'school', 'url' => ['/universitas']],
+                            ['label' => 'Jenjang Pendidikan', 'icon' => 'fas fa-graduation-cap', 'url' => ['/jenjang-pendidikan']],
+        
                         ]
                         ],
                     
