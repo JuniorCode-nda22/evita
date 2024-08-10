@@ -41,4 +41,16 @@ class JenjangPendidikan extends \yii\db\ActiveRecord
             'jenjang' => 'Jenjang',
         ];
     }
+
+    /**
+     * Returns an array suitable for use in a dropdown.
+     *
+     * @return array
+     */
+    public static function dropdown()
+    {
+        $sql = 'SELECT id, jenjang AS jenjang_pendidikan FROM jenjang_pendidikan';
+        $result = Yii::$app->db->createCommand($sql)->queryAll();
+        return \yii\helpers\ArrayHelper::map($result, 'id', 'jenjang_pendidikan');
+    }
 }

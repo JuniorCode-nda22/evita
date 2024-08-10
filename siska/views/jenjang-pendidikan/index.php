@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 /** @var siska\models\JenjangPendidikanSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Jenjangpendidikans';
+$this->title = 'Jenjangpendidikan';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="jenjangpendidikan-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Jenjangpendidikan', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Tambah  Jenjangpendidikan', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            // 'id',
             'jenjang',
             [
                 'class' => ActionColumn::className(),

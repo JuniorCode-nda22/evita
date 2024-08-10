@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /** @var siska\models\jenjangpendidikan $model */
 
 $this->title = 'Update Jenjangpendidikan: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Jenjangpendidikans', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => 'Jenjangpendidikan', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'jenjang' => $model->jenjang]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="jenjangpendidikan-update">

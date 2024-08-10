@@ -1,7 +1,11 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+// kraje
+use kartik\form\ActiveForm;
+use kartik\select2\Select2;
+// model
+use siska\models\JenjangPendidikan;
 
 /** @var yii\web\View $this */
 /** @var siska\models\jenjangpendidikan $model */
@@ -12,10 +16,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'jenjang')->textInput(['maxlength' => true]) ?>
-
+    <?= $form->field($model, 'jenjang')->widget(Select2::classname(), [
+        'data' => JenjangPendidikan::dropdown(),
+        'options' => ['placeholder' => 'Pilih jenjang pendidikan...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('simpan ', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

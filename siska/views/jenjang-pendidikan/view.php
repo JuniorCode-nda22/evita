@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var siska\models\jenjangpendidikan $model */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Jenjangpendidikans', 'url' => ['index']];
+$this->title = $model->jenjang;
+$this->params['breadcrumbs'][] = ['label' => 'Jenjangpendidikan', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
