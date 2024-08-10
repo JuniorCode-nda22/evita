@@ -41,4 +41,16 @@ class StatusDosen extends \yii\db\ActiveRecord
             'status' => 'Status',
         ];
     }
+
+    /**
+     * Returns an array suitable for use in a dropdown.
+     *
+     * @return array
+     */
+    public static function dropdown()
+    {
+        $sql = 'SELECT id, status AS status_dosen FROM status_dosen';
+        $result = Yii::$app->db->createCommand($sql)->queryAll();
+        return \yii\helpers\ArrayHelper::map($result, 'id', 'status_dosen');
+    }
 }
