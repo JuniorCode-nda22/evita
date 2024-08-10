@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var siska\models\agama $model */
 
-$this->title = 'Create Agama';
-$this->params['breadcrumbs'][] = ['label' => 'Agamas', 'url' => ['index']];
+$this->title = 'Tambahkan Agama';
+$this->params['breadcrumbs'][] = ['label' => 'Agama', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="agama-create">

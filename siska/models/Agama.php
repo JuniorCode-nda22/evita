@@ -3,6 +3,7 @@
 namespace siska\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "agama".
@@ -37,8 +38,14 @@ class Agama extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'nama_agama' => 'Nama Agama',
+            'id' => 'ID', 'nama_agama' => 'Nama Agama',
         ];
     }
+  public static function dropdown()
+{
+    $sql = 'SELECT id, CONCAT( nama_agama) AS agama FROM agama; ';
+    $result = yii::$app->db->createCommand($sql)->queryAll();
+    return \yii\helpers\ArrayHelper::map($result, 'id', 'agama');
+}
+
 }
