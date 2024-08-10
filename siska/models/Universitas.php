@@ -41,4 +41,16 @@ class Universitas extends \yii\db\ActiveRecord
             'nama_universitas' => 'Nama Universitas',
         ];
     }
+
+    /**
+     * Returns an array suitable for use in a dropdown.
+     *
+     * @return array
+     */
+    public static function dropdown()
+    {
+        $sql = 'SELECT id, nama_universitas AS universitas FROM universitas';
+        $result = Yii::$app->db->createCommand($sql)->queryAll();
+        return \yii\helpers\ArrayHelper::map($result, 'id', 'universitas');
+    }
 }
