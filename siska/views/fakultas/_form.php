@@ -1,10 +1,13 @@
 <?php
 
+use siska\models\Fakultas;
+// krajee
+use kartik\form\ActiveForm;
+use kartik\select2\Select2;
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var siska\models\fakultas $model */
+/** @var siska\models\Fakultas $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
@@ -14,10 +17,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'kode')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'nama_fakultas')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nama_fakultas')->widget(Select2::classname(), [
+        'data' => Fakultas::dropdown(),
+        'options' => ['placeholder' => 'Pilih Fakultas...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Simpan', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

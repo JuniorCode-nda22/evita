@@ -3,9 +3,10 @@
 namespace siska\models;
 
 use yii\helpers\ArrayHelper;
+use Yii;
 
 /**
- * This is the model class for table "fakultas".
+ * Ini adalah kelas model untuk tabel "fakultas".
  *
  * @property int $id
  * @property string $kode
@@ -50,7 +51,7 @@ class Fakultas extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Prodis]].
+     * Mengambil query untuk [[Prodis]].
      *
      * @return \yii\db\ActiveQuery
      */
@@ -60,13 +61,14 @@ class Fakultas extends \yii\db\ActiveRecord
     }
 
     /**
-     * Returns an array suitable for use in a dropdown.
+     * Mengembalikan array yang cocok untuk digunakan dalam dropdown.
      *
      * @return array
      */
     public static function dropdown()
     {
-        $models = self::find()->all();
-        return ArrayHelper::map($models, 'id', 'nama_fakultas');
+        $sql = 'SELECT id, nama_fakultas AS fakultas FROM fakultas';
+        $result = Yii::$app->db->createCommand($sql)->queryAll();
+        return ArrayHelper::map($result, 'id', 'fakultas');
     }
 }
