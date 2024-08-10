@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 /** @var siska\models\WilayahSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Wilayahs';
+$this->title = 'Wilayah';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="wilayah-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Wilayah', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('tambah Wilayah', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>

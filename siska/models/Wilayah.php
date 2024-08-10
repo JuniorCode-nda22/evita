@@ -39,8 +39,16 @@ class Wilayah extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'kode' => 'Kode',
+            'kode' => 'kode',
             'nama_wilayah' => 'Nama Wilayah',
         ];
+    }
+
+    public static function dropdown()
+    {
+        // Menggunakan kode sebagai pengganti id di ArrayHelper
+        $sql = 'SELECT kode, CONCAT(nama_wilayah) AS wilayah FROM wilayah;';
+        $result = yii::$app->db->createCommand($sql)->queryAll();
+        return \yii\helpers\ArrayHelper::map($result, 'kode', 'wilayah'); // Ubah 'id' menjadi 'kode' dan 'agama' menjadi 'wilayah'
     }
 }

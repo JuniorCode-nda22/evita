@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var siska\models\Wilayah $model */
 
-$this->title = 'Update Wilayah: ' . $model->kode;
-$this->params['breadcrumbs'][] = ['label' => 'Wilayahs', 'url' => ['index']];
+$this->title = 'Ubah Wilayah: ' . $model->kode;
+$this->params['breadcrumbs'][] = ['label' => 'Wilayah', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->kode, 'url' => ['view', 'kode' => $model->kode]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

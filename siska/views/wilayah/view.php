@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var siska\models\Wilayah $model */
 
-$this->title = $model->kode;
-$this->params['breadcrumbs'][] = ['label' => 'Wilayahs', 'url' => ['index']];
+$this->title = $model->nama_wilayah;
+$this->params['breadcrumbs'][] = ['label' => 'Wilayah', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'kode' => $model->kode], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'kode' => $model->kode], [
+        <?= Html::a('Ubah', ['update', 'kode' => $model->kode], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Hapus', ['delete', 'kode' => $model->kode], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',

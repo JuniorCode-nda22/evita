@@ -1,7 +1,12 @@
 <?php
 
+
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+// krajee
+use kartik\form\ActiveForm;
+use kartik\select2\Select2;
+// model
+use siska\models\Wilayah;
 
 /** @var yii\web\View $this */
 /** @var siska\models\Wilayah $model */
@@ -14,7 +19,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'kode')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'nama_wilayah')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nama_wilayah')->widget(Select2::classname(), [
+        'data' => Wilayah::dropdown(),
+        'options' => ['placeholder' => 'Pilih wilatyah...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
